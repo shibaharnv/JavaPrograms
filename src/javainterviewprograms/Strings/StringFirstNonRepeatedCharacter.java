@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.TreeSet;
 
-public class StringFirstNonRepeatedCharacter {
+public class  StringFirstNonRepeatedCharacter {
 
     public static void main(String[] args)
     {

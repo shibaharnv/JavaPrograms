@@ -7,7 +7,7 @@ public class BinarySearchIndexMethod {
 
         int[] a={2, 3, 5, 7, 8, 10, 12, 15, 18, 20};
         BinarySearchIndexMethod obj = new BinarySearchIndexMethod();
-        int answer=33;
+        int answer=3;
         int index =obj.binarySearchIndex(a,answer);
         if(index==-1)
         {

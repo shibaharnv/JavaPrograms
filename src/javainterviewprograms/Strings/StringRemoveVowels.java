@@ -6,9 +6,11 @@ public class StringRemoveVowels {
     {
         String word = "shibahar";
 
-        word=word.replaceAll("a","").replaceAll("i","").replaceAll("e","");
+      //  word=word.replaceAll("a","").replaceAll("i","").replaceAll("e","");
 
+
+
+        word=word.replaceAll("[aeiouAEIOU]","");
         System.out.println(word);
-
     }
 }

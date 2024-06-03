@@ -13,6 +13,7 @@ public class StringDuplicateRemoval {
 
         String word ="java";
 
+
         char[] charArray= new char[word.length()];
 
 

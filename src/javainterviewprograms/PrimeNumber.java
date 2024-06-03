@@ -11,7 +11,7 @@ public class PrimeNumber {
         int remainder;
         boolean flag=false;
 
-        if(givenNumber!=0)
+        if(givenNumber!=0 ||givenNumber<0)
         {
             remainder=givenNumber%2;
             if(remainder!=0)
@@ -23,7 +23,7 @@ public class PrimeNumber {
 
         else
         {
-            System.out.println("Given number"+givenNumber+ "is Zero");
+            System.out.println("Given number"+givenNumber+ "is Zero or negative number");
         }
 
         if(flag)

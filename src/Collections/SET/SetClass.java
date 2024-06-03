@@ -7,11 +7,13 @@ import java.util.*;
 
 public class SetClass {
 
-    //{No duplicates No order .No Null order
+    //{No duplicates No order .
+    // In set different data types can be added as an object
     // We need to use Wrapper class so that
     // Array can be added directly to a set using Arrays.aslist(arrayname) while object creation
+    //Int array can be converted into integer array and that can be added as a list while declaring set eg :Set setobj = new HashSet(Arrays.asList(integerarray));
     // Converting int array to wrapper class Integer array for that use Arrays.setall method
-    // In set different data types can be added as an object
+
     // No datatype for set
     // Set can be added to an another Set using add all method
     // Set objects can be printed directly or we can convert that to to string and print
@@ -24,12 +26,84 @@ public class SetClass {
     //  In iterator inorder to remove the elements first we need to do next
     //  List iterator is similar to iterator but it contains hasprevious and previous methods along with has next and next methods
     //  Retainall method - Retain first object    txtobj.retainAll(newobj); inthis case reatian txtobj
-    //  add all union,retainall -intersection, remove all -difference}
+    //  add all union,retainall -intersection, remove all -difference
+    //
+    //  Important point to remember if you try to add duplicate to a set then it returns false
+    //  If we try to remove a element that is not present inside the set then it throws false.
+    //  To array conversion    Integer[] integerArray1=intSet.toArray(new Integer[intSet.size()]);
+    //  In Iterator we have equal,next ,hasnext,remove
+    //  //All three implementations HashSet, LinkedHashSet and TreeSet are not synchronized. So if you use them in concurrent context (multi-threads), you have to synchronize them externally using Collections.synchronizedSet() static method. For example:
+    //1
+    //Set<Integer> numbers = Collections.synchronizedSet(new HashSet<Integer>());}
 
     public static void main(String[] args)
     {
 
 
+        Set testobj2 = new HashSet();
+
+
+
+        testobj2.add(null);
+        testobj2.add(2);
+        testobj2.add("word");
+        System.out.println(testobj2);
+
+        Set<Integer> intSet= new HashSet<>();
+
+        intSet.add(5);
+        intSet.add(10);
+        intSet.add(15);
+        intSet.add(25);
+        System.out.println("inset "+intSet);
+
+
+        Set<Integer> intSet2= new LinkedHashSet<>();
+
+        intSet2.add(5);
+        intSet2.add(10);
+        intSet2.add(15);
+
+        intSet.removeAll(intSet2);
+
+        System.out.println("After removing "+intSet);
+       // intSet2.add(25);
+        System.out.println("intSet2 "+intSet2);
+
+        System.out.println("CONTAINS ALL CHECK "+intSet.containsAll(intSet2));
+
+        System.out.println("RETAINALL CHECK "+intSet.retainAll(intSet2));
+        System.out.println("After retaining "+intSet);
+
+
+
+       Set<Integer> set = Collections.synchronizedSet(new HashSet<>());
+
+        Iterator itr3=intSet2.iterator();
+
+        while (itr3.hasNext())
+        {
+            System.out.println("my itr"+itr3.next() );
+
+        }
+
+
+
+
+        System.out.println("EUQLS CHECK "+intSet2.equals(intSet));
+
+        Integer[] integerArray1=intSet.toArray(new Integer[intSet.size()]);
+
+        System.out.println("integerArray "+Arrays.toString(integerArray1));
+
+        testobj2.remove(2);
+
+        if(!testobj2.remove(2))
+        {
+            System.out.println("element not present to remove");
+        }
+
+        System.out.println("After removeing"+testobj2);
 
 
      ArrayList testobj = new ArrayList();
@@ -299,6 +373,37 @@ public class SetClass {
 
         }
 
+
+
+        int[] numArray= {1,2,3,4,5,6};
+
+        Integer[] integerArray= new Integer[numArray.length];
+
+        Arrays.setAll(integerArray,i->numArray[i]);
+
+        ArrayList<Integer> al = new ArrayList<>(Arrays.asList(integerArray));
+
+        System.out.println(al);
+
+
+        HashSet hs = new HashSet();
+        hs.add("test");
+        hs.add(1);
+
+        System.out.println(hs);
+
+        ArrayList als= new ArrayList();
+
+        als.add("tesitng");
+        als.add("tesitng2");
+
+        hs.addAll(als);
+
+        System.out.println(hs);
+
+        hs.removeAll(als);
+
+        System.out.println(hs);
 
     }
 }

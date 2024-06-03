@@ -18,6 +18,8 @@ public class HashMapClass {
         m.put(2,"test2");
         m.put(3,"test3");
 
+
+
         Set so= m.entrySet();
         Iterator its=so.iterator();
 

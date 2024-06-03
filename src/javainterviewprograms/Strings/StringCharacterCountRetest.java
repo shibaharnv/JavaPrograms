@@ -1,35 +1,53 @@
 package javainterviewprograms.Strings;
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
 public class StringCharacterCountRetest {
 
     public static void main(String[] args)
     {
        // String word= "shibahar";
-        String word="ssbbaaa";
+        String word="sszxaa";
 
-        char[] wordCharArray=word.toCharArray();
+       char[] charArray=word.toCharArray();
 
-        HashMap<Character,Integer> hm= new HashMap<>();
+       TreeMap<Character,Integer> hm = new TreeMap<>();
+
+       for(int i =0;i<word.length();i++)
+       {
+           char character=charArray[i];
+
+           if(!hm.containsKey(character))
+           {
+               hm.put(character,1);
+           }
+           else
+           {
+               hm.put(character,hm.get(character)+1);
+           }
 
 
-        int count=1;
 
-        for(int i=0;i< wordCharArray.length;i++)
+       }
+
+        System.out.println(hm.entrySet());
+
+       //Count duplicates
+
+        System.out.println(hm.values());
+
+        for(Object c:hm.keySet())
         {
-            if(!hm.containsKey(wordCharArray[i]))
+
+            char myChar= (char)c;
+           // System.out.println(myChar);
+
+            if(hm.get(myChar)>1)
             {
-                hm.put(wordCharArray[i],count);
-            }
-            else
-            {
-                hm.put(wordCharArray[i],count+1);
+                System.out.println("this character  " +myChar+ "  is duplicate ");
             }
         }
-
-        System.out.println(hm);
-
 
 
     }

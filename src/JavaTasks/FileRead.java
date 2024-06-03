@@ -1,6 +1,7 @@
 package JavaTasks;
 
 import javax.swing.*;
+import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.io.*;
 import java.util.Scanner;
 
@@ -9,8 +10,34 @@ public class FileRead {
     public static void main(String[] args) throws IOException {
 
         //{Find no of words}
+          File fs= new File("/Users/shibahar/Desktop/Shibahar/Resume/test.txt");
+        FileReader frm= new FileReader(fs);
 
-        FileReader frm= new FileReader("/Users/snagarajan/Desktop/CTT/sample");
+
+        //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(frm);
+        String line;
+        int count=0;
+        while (br.readLine()!=null)
+        {
+
+            System.out.println(count++);
+            System.out.println();
+        }
+
+        System.out.println(count);
+
+//       int count= Integer.parseInt(br.readLine());
+//        System.out.println(count);
+
+
+        Scanner scan= new Scanner(System.in);
+
+
+
+
+
+
         int myData = frm.read();
 
         int wordCount=1;
@@ -31,7 +58,7 @@ public class FileRead {
 
         //{Method 1: File reader Class}
 
-        FileReader frobj = new FileReader("/Users/snagarajan/Desktop/CTT/sample");
+        FileReader frobj = new FileReader("/Users/shibahar/Desktop/Shibahar/Resume/test.txt");
 
             int data=frobj.read();
 
@@ -51,7 +78,7 @@ public class FileRead {
 
         // {Method 2: File and scanner class}
 
-        File fobj =new File("/Users/snagarajan/Desktop/CTT/sample");
+        File fobj =new File("/Users/shibahar/Desktop/Shibahar/Resume/test.txt");
         Scanner sobj = new Scanner(fobj);
 
         int noOfLines=0;

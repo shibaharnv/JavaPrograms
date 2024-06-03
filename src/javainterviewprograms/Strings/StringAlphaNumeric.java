@@ -38,6 +38,24 @@ public class StringAlphaNumeric {
 
         System.out.println(total);
 
+       // int remain=0;
+        int totals=0;
+
+        int a=123;
+        while (a>0) {
+            int remain=0;
+            remain = a % 10;
+            a=a/10;
+            totals = totals + remain;
+        }
+
+        System.out.println(totals);
+
+
     }
+
+
+
+
 
 }

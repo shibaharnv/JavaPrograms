@@ -13,6 +13,8 @@ public class StringCountWords {
         String s="test";
         int wordLength= word.length();
 
+        System.out.println(wordLength);
+
         Character c;
         int count=1;
 

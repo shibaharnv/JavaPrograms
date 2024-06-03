@@ -11,8 +11,8 @@ public class PrimeNumberCheck {
 		//Given number should be divisible by 1 or itself
 		
 		// what to check - given number is divisible by 2 ,3,....n-1
-		
-		
+
+		 System.out.println(Math.sqrt(16));
 			Scanner scanobj = new Scanner(System.in);
 		
 			System.out.println("Enter the number ");

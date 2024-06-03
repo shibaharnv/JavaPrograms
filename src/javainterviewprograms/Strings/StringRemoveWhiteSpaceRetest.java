@@ -10,5 +10,6 @@ public class StringRemoveWhiteSpaceRetest {
 
         System.out.println(w);
 
+
     }
 }

@@ -15,6 +15,11 @@ public class QueueClass {
         qobj.add(2) ;
         System.out.println("fifo" +qobj);
 
+        System.out.println(qobj.poll());
+        System.out.println(qobj.poll());
+        System.out.println("fifo" +qobj);
+        System.out.println(qobj.peek());
+
         Queue qObjColor = new PriorityQueue();
 
         qObjColor.add("red");

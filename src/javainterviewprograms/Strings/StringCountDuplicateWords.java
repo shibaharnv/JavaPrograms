@@ -1,5 +1,6 @@
 package javainterviewprograms.Strings;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -20,21 +21,52 @@ public class StringCountDuplicateWords {
         String[] wordArray = word.split(" ");
         System.out.println(Arrays.toString(wordArray));
 
-        HashMap hobj = new HashMap();
+        HashMap<String,Integer> hobj = new HashMap();
         int i=1;
-        for(String s:wordArray)
+
+
+        for(String sd:wordArray)
         {
-            if(hobj.containsKey(s))
+            if(!hobj.containsKey(sd))
             {
-              hobj.put(s,i+1);
+                hobj.put(sd,1);
             }
             else {
-                hobj.put(s,i);}
-
-
+                hobj.put(sd,hobj.get(sd)+1);
+            }
         }
-
         System.out.println(hobj);
+
+        int count=0;
+
+        ArrayList al= new ArrayList();
+
+        for(String s:hobj.keySet())
+        {
+           count= hobj.get(s);
+
+           if(count>1)
+           {
+               al.add(s);
+           }
+        }
+        System.out.println(al);
+
+
+
+//        for(String s:wordArray)
+//        {
+//            if(hobj.containsKey(s))
+//            {
+//              hobj.put(s,i+1);
+//            }
+//            else {
+//                hobj.put(s,i);}
+//
+//
+//        }
+//
+//        System.out.println(hobj);
 
 
 

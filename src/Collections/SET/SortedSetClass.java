@@ -33,6 +33,55 @@ public class SortedSetClass {
 
 
 
+
+        System.out.println("Before removing "+ssobj);
+        System.out.println("subset "+ssobj.subSet(100,432));
+
+        System.out.println("first "+ssobj.first());
+        System.out.println("lasst "+ssobj.last());
+
+        Set<Integer> headset=ssobj.headSet(100);
+        System.out.println(headset);
+        System.out.println("headset "+headset);
+
+        Set<Integer> tailset=ssobj.tailSet(200);
+        System.out.println(tailset);
+        System.out.println("tailset "+tailset);
+
+        Iterator itr=ssobj.iterator();
+
+        TreeSet ssobj1 = new TreeSet();
+
+
+
+        ssobj1.add(432);
+        ssobj1.add(42345);
+        ssobj1.add(54);
+        ssobj1.add(88);
+        ssobj1.add(100);
+        ssobj1.add(200);
+        System.out.println("beofre removing last element"+ssobj1);
+        Iterator itr1=ssobj1.descendingIterator();
+
+        while (itr1.hasNext())
+        {
+
+            itr1.next();
+            itr1.remove();
+            break;
+        }
+        System.out.println("after removing last element"+ssobj1);
+
+        while (itr.hasNext())
+        {
+
+            itr.next();
+            itr.remove();
+            break;
+        }
+
+        System.out.println("after removing first element"+ssobj);
+
         sscharobj.add('z');
         sscharobj.add('t');
         sscharobj.add('a');

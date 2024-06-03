@@ -9,8 +9,28 @@ public class StringABCDNUMBERS {
 
         String sample="abcd";
 
+        char d='d';
+
+        int dvalue= (int)d-'a'+1;
+
+        System.out.println("dvale"+dvalue);
+
+        for(int k=0;k<sample.length();k++)
+        {
+            char myChar=sample.charAt(k);
+
+            int values= (int) myChar-'a'+1;
+
+            System.out.print(myChar);
+            System.out.print(" "+values);
+            System.out.println();
+
+        }
+
+
         char c='c';
-        int val= (int)(c)-'a'+1;
+       // int val= (int)(c)-'a'+1;
+        int val= (int)'c'-'a'+1;
 
         System.out.println("Val"+val);
 

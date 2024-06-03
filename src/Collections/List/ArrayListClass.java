@@ -18,15 +18,61 @@ public class ArrayListClass {
     // To array will return object array and that can be converted to string array using for each method
     // While object creation of set and list both can be added as  a parameter eg given below
     //     List newListObj= new ArrayList(setObj);
-    //     Set newSetObj= new TreeSet(listobj);}
+    //     Set newSetObj= new TreeSet(listobj);
+    //     userful methods: add,addall,remove ,removeall, is empty,clear,indexof ,lastindex of list iterator}
 
     public static void main(String[] args)
     {
+
+        List lobj1 = new ArrayList();
+
+
+        lobj1.add(10);//0
+        lobj1.add("test");//1
+        lobj1.add('c');//2
+
+        lobj1.set(0,11);
+
+        System.out.println(lobj1);
+
+        List lobj2 = new ArrayList();
+
+
+        lobj2.add(10);//0
+        lobj2.add(20);//1
+        lobj2.add(30);//2
+
+
+        ListIterator litr=lobj2.listIterator();
+
+        while (litr.hasNext())
+        {
+            System.out.println("inside"+litr.next());
+        }
+
+        while (litr.hasPrevious())
+        {
+            System.out.println("inside previous "+litr.previous());
+        }
+
+
+        ListIterator litr1=lobj2.listIterator(20);
+
+        while (litr1.hasNext())
+        {
+            System.out.println("inside"+litr.next());
+        }
+
+
+
+
         List lobj = new ArrayList();
 
         lobj.add(10);//0
         lobj.add("test");//1
         lobj.add('c');//2
+
+        System.out.println("before adding"+lobj);
       //  lobj.add(0,20);
        // lobj.add(1,"sample");
         lobj.set(2,'d');

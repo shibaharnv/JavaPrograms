@@ -27,7 +27,7 @@ public class ValidParenthesesCheckUsingStackRetest {
     public static void main(String[] args)
     {
 
-        String bracets="){}[]}";
+        String bracets="){}[](";
 
         boolean output =isValid(bracets);
 
