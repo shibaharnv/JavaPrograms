@@ -7,7 +7,7 @@ import java.util.*;
 
 public class SetClass {
 
-    //{No duplicates No order .
+    //{No duplicates No order
     // In set different data types can be added as an object
     // We need to use Wrapper class so that
     // Array can be added directly to a set using Arrays.aslist(arrayname) while object creation
@@ -41,7 +41,6 @@ public class SetClass {
 
 
         Set testobj2 = new HashSet();
-
 
 
         testobj2.add(null);
