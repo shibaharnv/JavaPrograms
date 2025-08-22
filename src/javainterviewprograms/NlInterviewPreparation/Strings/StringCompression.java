@@ -3,7 +3,7 @@ package javainterviewprograms.NlInterviewPreparation.Strings;
 public class StringCompression {
 
     public static void main(String[] args) {
-        String input = "aabaaa";
+        String input = "aab";
         StringBuilder output = new StringBuilder();
 
         int count = 1;
