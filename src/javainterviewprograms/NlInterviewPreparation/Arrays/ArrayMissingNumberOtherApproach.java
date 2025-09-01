@@ -13,7 +13,7 @@ public class ArrayMissingNumberOtherApproach {
         // iterate one by one so it will be in sequence
         // check if each number is present in array
         //}
-            int[] a={5,2,4,6,9,12};
+            int[] a={1,2,4};
         Arrays.sort(a);
 
             int first=a[0];
